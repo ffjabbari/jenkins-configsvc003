@@ -1,2 +1,2 @@
 
-fredj # multibranch-sample-app
+fredj # multibranch-sample-appfred1
