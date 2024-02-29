@@ -1,13 +1,10 @@
 pipeline {
-  agent any
-  options {
-    buildDiscarder(logRotator(numToKeepStr: '5'))
-  }
-  stages {
-    stage('Hello') {
-      steps {
-        echo "Hello...4main"
-      }
+    agent { docker { image 'node:20.11.1-alpine3.19' } }
+    stages {
+        stage('build') {
+            steps {
+                sh 'node --version'
+            }
+        }
     }
-  }
 }
