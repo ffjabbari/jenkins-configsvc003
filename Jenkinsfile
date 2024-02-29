@@ -1,13 +1,10 @@
 pipeline {
-  agent {label 'linux'}
-  options {
-    buildDiscarder(logRotator(numToKeepStr: '5'))
-  }
-  stages {
-    stage('Hello') {
-      steps {
-        echo "Hello...3"
-      }
+    agent { any { image 'node:12.16.2' args '-p 3000:3000' } }
+    stages {
+        stage('build') {
+            steps {
+                sh 'node --version'
+            }
+        }
     }
-  }
 }
