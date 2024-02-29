@@ -1,9 +1,9 @@
 pipeline {
-    agent { any { image 'node:12.16.2' args '-p 3000:3000' } }
+    agent any 
     stages {
-        stage('build') {
+        stage('Stage 1') {
             steps {
-                sh 'node --version'
+                echo 'Hello world!' 
             }
         }
     }
