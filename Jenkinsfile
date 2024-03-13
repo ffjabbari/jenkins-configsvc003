@@ -6,7 +6,6 @@ pipeline {
             steps {
                 echo 'Hello world!Main2'
                 echo 'hi fred3'
-                }
             }
         }
     }AWS-Credentials-fredsmac-99-acct
