@@ -2,8 +2,8 @@
 
 node {
   stage("List S3 buckets") {
-    withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'aws-key', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY']]) {
-        AWS("--region=eu-west-1 s3 ls")
+    withCredentials([[ $class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-key', accessKeyVariable: 'AKIA6ODU4FFL7NUXDQUU', secretKeyVariable: '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']]) {
+        AWS("--region=us-east-1 s3 ls")
     }
   }
 }
