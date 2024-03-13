@@ -8,5 +8,5 @@ pipeline {
                 echo 'hi fred3'
             }
         }
-    }AWS-Credentials-fredsmac-99-acct
+    }
 }
