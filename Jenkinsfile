@@ -1,3 +1,4 @@
+@Library('github.com/releaseworks/jenkinslib') _
 pipeline {
     agent any 
     stages {
@@ -6,8 +7,7 @@ pipeline {
                 echo 'Hello world!Main2'
                 withCredentials([[ $class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-key', accessKeyVariable: 'AKIA6ODU4FFL7NUXDQUU', secretKeyVariable: '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']]) {
                     echo 'hi fred3'
-                    sh 'aws configure --profile fredmac99'
-                    sh 'aws s3 ls'
+                    AWS("--region=us-east-1 s3 ls")
                 }
             }
         }
