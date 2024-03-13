@@ -5,8 +5,7 @@ pipeline {
         stage('Stage 1') {
             steps {
                 echo 'Hello world!Main2'
-                withCredentials([[ $class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'AWS-Credentials-fredsmac-99-acct', accessKeyVariable: 'AKIA6ODU4FFL7NUXDQUU', secretKeyVariable: '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']]) {
-                    echo 'hi fred3'
+                echo 'hi fred3'
                 }
             }
         }
